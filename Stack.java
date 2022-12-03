@@ -18,6 +18,9 @@ public class Stack {
             return currentNb;
         }
         public wered Pop(){
+            if(isEmpty()){
+                System.out.println("the stack is empty");
+            }
             this.currentNb--;
             wered temp = a[currentNb];
             a[currentNb] = null;
