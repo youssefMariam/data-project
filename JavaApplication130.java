@@ -4,7 +4,19 @@ import java.util.Scanner;
 public class JavaApplication130 {
 public static void main(String[] args) {
     Scanner sc=new Scanner(System.in);
-/*  ArrayList<members> m = new ArrayList<>();
+    System.out.println("which file do you want to run?");
+    System.out.println("1=the scouts info");
+    System.out.println("2=the owners of the troop");
+    System.out.println("3=the inbox of thr troop");
+    int iii=sc.nextInt();
+    switch(iii){
+        
+    
+    
+    
+    
+        case 1:{
+ArrayList<members> m = new ArrayList<>();
 members member1=new members();
 m.add(member1);
 System.out.println("how many scouts do you want to add?");
@@ -48,14 +60,23 @@ m.get(0).display();
             System.out.println("enter the name do you want to search for");
             String ns=sc.nextLine();
             System.out.println(m.get(0).search(ns));
+        }else if(p=='n'){
+            System.out.println("okay");
+        }else{
+            System.out.println("invalid letter");
         }
         
-*/
-/*LinkedList l1=new LinkedList();
+    
+    
+        }break;
+    
+    
+        case 2:{
+LinkedList l1=new LinkedList();
 System.out.println("how many owners do you want to add?");
-int t=sc.nextInt();
+int ta=sc.nextInt();
 
-    for (int i = 0; i < t; i++) {
+    for (int i = 0; i < ta; i++) {
         sc.nextLine();
         System.out.println("what is the item?"); 
         String item=sc.nextLine();
@@ -103,7 +124,13 @@ int t=sc.nextInt();
         }
     System.out.println("the new owners are:");
     l1.display();
-*/
+
+
+
+
+        }break;
+
+        case 3:{
 Stack ss=new Stack();
 System.out.println("how many emails do you want to add?");
 int t=sc.nextInt();
@@ -125,5 +152,30 @@ int t=sc.nextInt();
           ss.Push(new wered(inNb,topic,sender,date,decisions));
 }ss.display();
 
+ System.out.println("do you want to pop an mail?");
+    char opp=sc.next().charAt(0);
+    if(opp=='y'){
+        System.out.println("how many mails do you want to pop?");
+        int b=sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i < b; i++) {
+            ss.Pop();
+        }
+        }else if(opp=='n'){
+                System.out.println("okay bro");
+                }else{
+            System.out.println("invalid letter");
+        }
+    System.out.println("the new inbox is:");
+    ss.display();
 
-}
+        System.out.println("do you want to search for ana email?");
+         char oppp=sc.next().charAt(0);
+    if(oppp=='y'){
+        System.out.println("input the sender name");
+        String test=sc.nextLine();
+       ss.search(test);
+    }
+    
+}break;}}}
+
